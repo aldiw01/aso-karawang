@@ -10,7 +10,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Apps, Info, Home, Launch, Build, CastConnected } from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
@@ -52,6 +52,98 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
+          buttonText="FTTH"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Home}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              ASO Profile
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Developer
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Contact Us
+            </Link>
+          ]}
+        />
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="Provisioning"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Launch}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              ASO Profile
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Developer
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Contact Us
+            </Link>
+          ]}
+        />
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="Assurance"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Build}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              ASO Profile
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Developer
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Contact Us
+            </Link>
+          ]}
+        />
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="WOC"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={CastConnected}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              ASO Profile
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Developer
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Contact Us
+            </Link>
+          ]}
+        />
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
           buttonText="Components"
           buttonProps={{
             className: classes.navLink,
@@ -72,18 +164,31 @@ function HeaderLinks({ ...props }) {
           ]}
         />
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
-      </ListItem>
 
       <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="About"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Info}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              ASO Profile
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Developer
+            </Link>,
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Contact Us
+            </Link>
+          ]}
+        />
+      </ListItem>
+
+      {/* <ListItem className={classes.listItem}>
         <Link to={props.state.user ? "/profile-page" : "/login-page"}>
           <Button
             href=""
@@ -95,7 +200,7 @@ function HeaderLinks({ ...props }) {
       </ListItem>
       {
         props.state.user ? <Logout {...props} /> : <RegisterButton {...props} />
-      }
+      } */}
     </List>
   );
 }

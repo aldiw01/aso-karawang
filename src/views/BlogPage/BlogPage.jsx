@@ -33,9 +33,9 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
 
-import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.jsx";
+import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
-class ProfilePage extends React.Component {
+class BlogPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     const imageClasses = classNames(
@@ -58,56 +58,18 @@ class ProfilePage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+        <Parallax small filter image={require("assets/img/profile-bg.jpg")}>
+          <div className={classes.container}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={10}>
+                <h1 className={classes.title}>Pedoman ASO Witel Karawang</h1>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={6}>
-                  <div className={classes.profile}>
-                    <div>
-                      <img src={profile} alt="..." className={imageClasses} />
-                    </div>
-                    <div className={classes.name}>
-                      <h3 className={classes.title}>Aldi Wiranata</h3>
-                      <h6>DEVELOPER</h6>
-                      <Button
-                        justIcon
-                        link
-                        className={classes.margin5}
-                        title="Email"
-                        href="mailto:aldiw01@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className={"fas fa-at"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        link
-                        className={classes.margin5}
-                        title="Linkedin"
-                        href="https://www.linkedin.com/in/aldiw01/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className={"fab fa-linkedin"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        link
-                        className={classes.margin5}
-                        title="Github"
-                        href="https://github.com/aldiw01"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className={"fab fa-github"} />
-                      </Button>
-                    </div>
-                  </div>
-                </GridItem>
-              </GridContainer>
               <div className={classes.description}>
                 <p>
                   An artist of considerable range, Chet Faker — the name taken
@@ -241,4 +203,4 @@ class ProfilePage extends React.Component {
   }
 }
 
-export default withStyles(profilePageStyle)(ProfilePage);
+export default withStyles(blogPageStyle)(BlogPage);
