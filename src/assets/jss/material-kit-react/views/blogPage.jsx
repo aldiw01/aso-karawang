@@ -44,6 +44,17 @@ const blogPageStyle = {
     zIndex: 1,
     textDecoration: "none"
   },
+  subtitle: {
+    ...title,
+    marginBottom: "1rem",
+    marginTop: "30px",
+    minHeight: "32px",
+    textDecoration: "none"
+  },
+  section: {
+    padding: "70px 0",
+    textAlign: "center"
+  },
   socials: {
     marginTop: "0",
     width: "100%",

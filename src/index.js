@@ -16,6 +16,11 @@ import LandingPage from "views/LandingPage/LandingPage.jsx";
 import ProfilePage from "views/ProfilePage/ProfilePage.jsx";
 import LoginPage from "views/LoginPage/LoginPage.jsx";
 import BlogPage from "views/BlogPage/BlogPage.jsx";
+import FTTHPage from "views/FTTHPage/BlogPage.jsx";
+import ProvisioningPage from "views/ProvisioningPage/BlogPage.jsx";
+import AssurancePage from "views/AssurancePage/BlogPage.jsx";
+import WOCPage from "views/WOCPage/BlogPage.jsx";
+import AboutPage from "views/AboutPage/BlogPage.jsx";
 
 var hist = createBrowserHistory();
 
@@ -35,6 +40,11 @@ ReactDOM.render(
         <Route path="/profile-page" component={ProfilePage} />
         <Route path="/login-page" component={LoginPage} />
         <Route path="/blog-page" component={BlogPage} />
+        <Route path="/ftth" component={FTTHPage} />
+        <Route path="/provision" component={ProvisioningPage} />
+        <Route path="/assurance" component={AssurancePage} />
+        <Route path="/woc" component={WOCPage} />
+        <Route path="/about" component={AboutPage} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>

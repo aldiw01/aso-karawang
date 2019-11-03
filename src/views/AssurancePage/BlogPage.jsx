@@ -42,7 +42,7 @@ class BlogPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>FTTH (Fiber To The Home)</h1>
+                <h1 className={classes.title}>Assurance</h1>
               </GridItem>
             </GridContainer>
           </div>

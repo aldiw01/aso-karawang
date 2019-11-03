@@ -59,14 +59,11 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Home}
           dropdownList={[
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              ASO Profile
+            <Link to="/ftth" className={classes.dropdownLink}>
+              Overview
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Developer
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Contact Us
+            <Link to="/ftth" className={classes.dropdownLink}>
+              Provisioning Type
             </Link>
           ]}
         />
@@ -82,14 +79,11 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Launch}
           dropdownList={[
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              ASO Profile
+            <Link to="/provision" className={classes.dropdownLink}>
+              Work Order
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Developer
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Contact Us
+            <Link to="/provision" className={classes.dropdownLink}>
+              IT Tools
             </Link>
           ]}
         />
@@ -105,14 +99,11 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Build}
           dropdownList={[
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              ASO Profile
+            <Link to="/assurance" className={classes.dropdownLink}>
+              Work Order
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Developer
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Contact Us
+            <Link to="/assurance" className={classes.dropdownLink}>
+              IT Tools
             </Link>
           ]}
         />
@@ -128,20 +119,26 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={CastConnected}
           dropdownList={[
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              ASO Profile
+            <Link to="/woc" className={classes.dropdownLink}>
+              Overview
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Developer
+            <Link to="/woc" className={classes.dropdownLink}>
+              HD Provision
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Contact Us
+            <Link to="/woc" className={classes.dropdownLink}>
+              HD Assurance
+            </Link>,
+            <Link to="/woc" className={classes.dropdownLink}>
+              HD Logic
+            </Link>,
+            <Link to="/woc" className={classes.dropdownLink}>
+              HD Fallout
             </Link>
           ]}
         />
       </ListItem>
 
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="Components"
@@ -163,7 +160,7 @@ function HeaderLinks({ ...props }) {
             </a>
           ]}
         />
-      </ListItem>
+      </ListItem> */}
 
       <ListItem className={classes.listItem}>
         <CustomDropdown
@@ -175,14 +172,14 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Info}
           dropdownList={[
-            <Link to="/profile-page" className={classes.dropdownLink}>
+            <Link to="/about" className={classes.dropdownLink}>
+              Witel Karawang
+            </Link>,
+            <Link to="/about" className={classes.dropdownLink}>
               ASO Profile
             </Link>,
             <Link to="/profile-page" className={classes.dropdownLink}>
               Developer
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Contact Us
             </Link>
           ]}
         />

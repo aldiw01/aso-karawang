@@ -8,6 +8,7 @@ import {
   grayColor,
   title
 } from "assets/jss/material-kit-react.jsx";
+import imagesStyle from "assets/jss/material-kit-react/imagesStyles.jsx";
 
 const infoStyle = {
   infoArea: {
@@ -20,6 +21,7 @@ const infoStyle = {
     marginTop: "24px",
     marginRight: "10px"
   },
+  ...imagesStyle,
   primary: {
     color: primaryColor
   },
