@@ -16,11 +16,19 @@ import LandingPage from "views/LandingPage/LandingPage.jsx";
 import ProfilePage from "views/ProfilePage/ProfilePage.jsx";
 import LoginPage from "views/LoginPage/LoginPage.jsx";
 import BlogPage from "views/BlogPage/BlogPage.jsx";
-import FTTHPage from "views/FTTHPage/BlogPage.jsx";
-import ProvisioningPage from "views/ProvisioningPage/BlogPage.jsx";
-import AssurancePage from "views/AssurancePage/BlogPage.jsx";
-import WOCPage from "views/WOCPage/BlogPage.jsx";
-import AboutPage from "views/AboutPage/BlogPage.jsx";
+import FTTHPage from "views/FTTHPage/FTTHPage.jsx";
+import PTPage from "views/FTTHPage/PTPage.jsx";
+import ProvWOPage from "views/ProvisioningPage/ProvWOPage.jsx";
+import ProvToolsPage from "views/ProvisioningPage/ProvToolsPage.jsx";
+import AssuranceWOPage from "views/AssurancePage/AssuranceWOPage.jsx";
+import AssuranceToolsPage from "views/AssurancePage/AssuranceToolsPage.jsx";
+import WOCPage from "views/WOCPage/WOCPage.jsx";
+import HDProvisionPage from "views/WOCPage/HDProvisionPage.jsx";
+import HDAssurancePage from "views/WOCPage/HDAssurancePage.jsx";
+import HDLogicPage from "views/WOCPage/HDLogicPage.jsx";
+import HDFalloutPage from "views/WOCPage/HDFalloutPage.jsx";
+import WitelPage from "views/AboutPage/WitelPage.jsx";
+import ASOPage from "views/AboutPage/ASOPage.jsx";
 
 var hist = createBrowserHistory();
 
@@ -37,14 +45,31 @@ ReactDOM.render(
     <Router history={hist}>
       <Switch>
         <Route path="/component" component={Components} />
-        <Route path="/profile-page" component={ProfilePage} />
         <Route path="/login-page" component={LoginPage} />
         <Route path="/blog-page" component={BlogPage} />
-        <Route path="/ftth" component={FTTHPage} />
-        <Route path="/provision" component={ProvisioningPage} />
-        <Route path="/assurance" component={AssurancePage} />
-        <Route path="/woc" component={WOCPage} />
-        <Route path="/about" component={AboutPage} />
+
+        <Route path="/ftth" exact component={FTTHPage} />
+        <Route path="/ftth/pt" component={PTPage} />
+
+        <Route path="/provisioning" exact component={ProvWOPage} />
+        <Route path="/provisioning/wo" component={ProvWOPage} />
+        <Route path="/provisioning/tools" component={ProvToolsPage} />
+
+        <Route path="/assurance" exact component={AssuranceWOPage} />
+        <Route path="/assurance/wo" component={AssuranceWOPage} />
+        <Route path="/assurance/tools" component={AssuranceToolsPage} />
+
+        <Route path="/woc" exact component={WOCPage} />
+        <Route path="/woc/provisioning" component={HDProvisionPage} />
+        <Route path="/woc/assurance" component={HDAssurancePage} />
+        <Route path="/woc/logic" component={HDLogicPage} />
+        <Route path="/woc/fallout" component={HDFalloutPage} />
+
+        <Route path="/about" exact component={WitelPage} />
+        <Route path="/about/witel" component={WitelPage} />
+        <Route path="/about/aso" component={ASOPage} />
+        <Route path="/about/developer" component={ProfilePage} />
+
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>

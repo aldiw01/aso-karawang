@@ -62,7 +62,7 @@ function HeaderLinks({ ...props }) {
             <Link to="/ftth" className={classes.dropdownLink}>
               Overview
             </Link>,
-            <Link to="/ftth" className={classes.dropdownLink}>
+            <Link to="/ftth/pt" className={classes.dropdownLink}>
               Provisioning Type
             </Link>
           ]}
@@ -79,10 +79,10 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Launch}
           dropdownList={[
-            <Link to="/provision" className={classes.dropdownLink}>
+            <Link to="/provisioning/wo" className={classes.dropdownLink}>
               Work Order
             </Link>,
-            <Link to="/provision" className={classes.dropdownLink}>
+            <Link to="/provisioning/tools" className={classes.dropdownLink}>
               IT Tools
             </Link>
           ]}
@@ -99,10 +99,10 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Build}
           dropdownList={[
-            <Link to="/assurance" className={classes.dropdownLink}>
+            <Link to="/assurance/wo" className={classes.dropdownLink}>
               Work Order
             </Link>,
-            <Link to="/assurance" className={classes.dropdownLink}>
+            <Link to="/assurance/tools" className={classes.dropdownLink}>
               IT Tools
             </Link>
           ]}
@@ -122,17 +122,23 @@ function HeaderLinks({ ...props }) {
             <Link to="/woc" className={classes.dropdownLink}>
               Overview
             </Link>,
-            <Link to="/woc" className={classes.dropdownLink}>
-              HD Provision
+            <Link to="/woc/provisioning" className={classes.dropdownLink}>
+              HD Provisioning
             </Link>,
-            <Link to="/woc" className={classes.dropdownLink}>
+            <Link to="/woc/assurance" className={classes.dropdownLink}>
               HD Assurance
             </Link>,
-            <Link to="/woc" className={classes.dropdownLink}>
+            <Link to="/woc/logic" className={classes.dropdownLink}>
               HD Logic
             </Link>,
-            <Link to="/woc" className={classes.dropdownLink}>
+            <Link to="/woc/fallout" className={classes.dropdownLink}>
               HD Fallout
+            </Link>,
+            <Link to="/woc/fallout" className={classes.dropdownLink}>
+              HD Maintenance
+            </Link>,
+            <Link to="/woc/fallout" className={classes.dropdownLink}>
+              HD TDM
             </Link>
           ]}
         />
@@ -172,13 +178,13 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Info}
           dropdownList={[
-            <Link to="/about" className={classes.dropdownLink}>
+            <Link to="/about/witel" className={classes.dropdownLink}>
               Witel Karawang
             </Link>,
-            <Link to="/about" className={classes.dropdownLink}>
+            <Link to="/about/aso" className={classes.dropdownLink}>
               ASO Profile
             </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
+            <Link to="/about/developer" className={classes.dropdownLink}>
               Developer
             </Link>
           ]}

@@ -3,10 +3,6 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-// @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -15,18 +11,21 @@ import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import ProfileArea from "components/ProfileArea/ProfileArea.jsx";
-import Button from "components/CustomButtons/Button.jsx";
 
 import profile from "assets/img/faces/aldi.jpg";
 import user from "assets/img/faces/user.svg";
 import users from "assets/img/faces/users.svg";
+
+import ASO from "assets/img/faces/ASO - Yahya.png";
+import WMS from "assets/img/faces/ASO - Oyok.png";
+import WOC247 from "assets/img/faces/ASO - Adit.png";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
-class BlogPage extends React.Component {
+class ASOPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     const imageClasses = classNames(
@@ -64,21 +63,18 @@ class BlogPage extends React.Component {
                 <GridItem xs={12} sm={12} md={6}>
                   <div className={classes.profile}>
                     <div>
-                      <img src={profile} alt="..." className={imageClasses} />
+                      <img src={ASO} alt="..." className={imageClasses} />
                     </div>
                     <div className={classes.name}>
                       <h3 className={classes.subtitle}>Manager Access Service Operation</h3>
-                      <h6>Aldi Wiranata</h6>
+                      <h6>Yahya</h6>
                     </div>
                   </div>
                 </GridItem>
               </GridContainer>
               <div className={classes.description}>
                 <p>
-                  An artist of considerable range, Chet Faker — the name taken
-                  by Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure.{" "}
+                  Put a description here.{" "}
                 </p>
               </div>
               <div className={classes.section}>
@@ -95,7 +91,7 @@ class BlogPage extends React.Component {
                     <ProfileArea
                       title="Asman WMS"
                       subtitle="Oyok Rosidi"
-                      icon={profile}
+                      icon={WMS}
                     />
                   </GridItem>
                   <GridItem xs={12} sm={12} md={3}>
@@ -146,7 +142,7 @@ class BlogPage extends React.Component {
                     <ProfileArea
                       title="OFF 3 WOC 24/7"
                       subtitle="Aditya Indra B"
-                      icon={profile}
+                      icon={WOC247}
                     />
                   </GridItem>
                   <GridItem xs={12} sm={12} md={3}>
@@ -182,4 +178,4 @@ class BlogPage extends React.Component {
   }
 }
 
-export default withStyles(blogPageStyle)(BlogPage);
+export default withStyles(blogPageStyle)(ASOPage);

@@ -21,7 +21,7 @@ import logo2 from "assets/img/telkomrev.png";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
-class BlogPage extends React.Component {
+class AssuranceToolsPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -42,7 +42,7 @@ class BlogPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>FTTH (Fiber To The Home)</h1>
+                <h1 className={classes.title}>Assurance</h1>
               </GridItem>
             </GridContainer>
           </div>
@@ -53,7 +53,7 @@ class BlogPage extends React.Component {
               <div className={classes.section}>
                 <GridContainer justify="center">
                   <GridItem xs={12} sm={12} md={8}>
-                    <h2 className={classes.subtitle}>Let's talk product</h2>
+                    <h2 className={classes.subtitle}>IT Tools</h2>
                     <h5 className={classes.description}>
                       This is the paragraph where you can write more details about your
                       product. Keep you user engaged by providing meaningful
@@ -104,4 +104,4 @@ class BlogPage extends React.Component {
   }
 }
 
-export default withStyles(blogPageStyle)(BlogPage);
+export default withStyles(blogPageStyle)(AssuranceToolsPage);
