@@ -134,10 +134,10 @@ function HeaderLinks({ ...props }) {
             <Link to="/woc/fallout" className={classes.dropdownLink}>
               HD Fallout
             </Link>,
-            <Link to="/woc/fallout" className={classes.dropdownLink}>
+            <Link to="/woc/maintenance" className={classes.dropdownLink}>
               HD Maintenance
             </Link>,
-            <Link to="/woc/fallout" className={classes.dropdownLink}>
+            <Link to="/woc/tdm" className={classes.dropdownLink}>
               HD TDM
             </Link>
           ]}

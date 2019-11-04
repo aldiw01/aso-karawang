@@ -27,6 +27,8 @@ import HDProvisionPage from "views/WOCPage/HDProvisionPage.jsx";
 import HDAssurancePage from "views/WOCPage/HDAssurancePage.jsx";
 import HDLogicPage from "views/WOCPage/HDLogicPage.jsx";
 import HDFalloutPage from "views/WOCPage/HDFalloutPage.jsx";
+import HDMaintenancePage from "views/WOCPage/HDMaintenancePage.jsx";
+import HDTDMPage from "views/WOCPage/HDTDMPage.jsx";
 import WitelPage from "views/AboutPage/WitelPage.jsx";
 import ASOPage from "views/AboutPage/ASOPage.jsx";
 
@@ -64,6 +66,8 @@ ReactDOM.render(
         <Route path="/woc/assurance" component={HDAssurancePage} />
         <Route path="/woc/logic" component={HDLogicPage} />
         <Route path="/woc/fallout" component={HDFalloutPage} />
+        <Route path="/woc/maintenance" component={HDMaintenancePage} />
+        <Route path="/woc/tdm" component={HDTDMPage} />
 
         <Route path="/about" exact component={WitelPage} />
         <Route path="/about/witel" component={WitelPage} />
