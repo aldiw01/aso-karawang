@@ -35,7 +35,7 @@ class TeamSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <GridItem xs={12} sm={12} md={8} className={classes.itemGrid}>
                   <img src={team1} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
@@ -78,7 +78,7 @@ class TeamSection extends React.Component {
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <GridItem xs={12} sm={12} md={10} className={classes.itemGrid}>
                   <img src={team2} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>

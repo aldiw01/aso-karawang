@@ -17,36 +17,30 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
-const RegisterButton = props => (
-  <ListItem className={props.classes.listItem}>
-    <Link to={"/login-page"}>
-      <Button
-        href=""
-        color="transparent"
-        target="_blank"
-        style={{ color: 'white' }}
-        className={props.classes.navLink}>Register</Button>
-    </Link>
-  </ListItem>
-)
-
-// the logout component emits a logout signal to redux
-const Logout = connect(dispatch => ({ dispatch }))(props => (
+const Logout = props => (
   <ListItem className={props.classes.listItem}>
     <Button
       href=""
       color="transparent"
       target="_blank"
-      style={{ color: 'white' }}
-      onClick={() => props.dispatch(logout())}
+      onClick={() => { localStorage.removeItem("auth"); window.location.href = '/'; }}
       className={props.classes.navLink}>Logout</Button>
   </ListItem>
-))
-
-
+)
 
 function HeaderLinks({ ...props }) {
-  const { classes } = props;
+  const { classes, user } = props;
+  // const profile = JSON.parse(localStorage.getItem("auth")) || "";
+  // var user = "";
+  // if (profile !== "") {
+  //   user = {
+  //     name: profile.name,
+  //     email: profile.email,
+  //     givenName: profile.givenName,
+  //     familyName: profile.familyName,
+  //     imageUrl: profile.imageUrl
+  //   }
+  // }
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -191,19 +185,19 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
 
-      {/* <ListItem className={classes.listItem}>
-        <Link to={props.state.user ? "/profile-page" : "/login-page"}>
+      <ListItem className={classes.listItem}>
+        <Link to={user ? "" : "/login"}>
           <Button
             href=""
             color="transparent"
             target="_blank"
-            style={{ color: 'white' }}
-            className={classes.navLink}>{props.state.user ? `${props.state.user.name} ${props.state.user.surname}` : `Login`}</Button>
+            // style={{ color: 'white' }}
+            className={classes.navLink}>{user ? `${user.name}` : `Login`}</Button>
         </Link>
       </ListItem>
       {
-        props.state.user ? <Logout {...props} /> : <RegisterButton {...props} />
-      } */}
+        user ? <Logout {...props} /> : ''
+      }
     </List>
   );
 }

@@ -47,7 +47,7 @@ ReactDOM.render(
     <Router history={hist}>
       <Switch>
         <Route path="/component" component={Components} />
-        <Route path="/login-page" component={LoginPage} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/blog-page" component={BlogPage} />
 
         <Route path="/ftth" exact component={FTTHPage} />

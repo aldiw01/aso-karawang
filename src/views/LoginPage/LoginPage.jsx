@@ -21,6 +21,9 @@ import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
+
+import GoogleLogin from 'react-google-login';
+
 // assets
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 import image from "assets/img/bg7.jpg";
@@ -45,6 +48,7 @@ class LoginPage extends React.Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
+    // this.googleAuth = new googleAuth();
   }
 
   componentDidMount() {
@@ -109,6 +113,10 @@ class LoginPage extends React.Component {
   }
   render() {
     const { classes, ...rest } = this.props;
+    const responseGoogle = (response) => {
+      localStorage.setItem('auth', JSON.stringify(response.profileObj));
+      window.location.href = '/';
+    }
     return (
       <div>
         <Header
@@ -135,7 +143,7 @@ class LoginPage extends React.Component {
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login</h4>
                       <div className={classes.socialLine}>
-                        <Button
+                        {/* <Button
                           justIcon
                           href="#pablo"
                           target="_blank"
@@ -155,17 +163,37 @@ class LoginPage extends React.Component {
                         </Button>
                         <Button
                           justIcon
-                          href="#pablo"
+                          href="#"
                           target="_blank"
                           color="transparent"
                           onClick={e => e.preventDefault()}
                         >
                           <i className={"fab fa-google-plus-g"} />
-                        </Button>
+                        </Button> */}
+
+                        <GoogleLogin
+                          clientId="49527778224-0ohjb04oiflj3q52av9c5m72n4rvd0ep.apps.googleusercontent.com"
+                          buttonText="Login"
+                          render={renderProps => (
+                            <Button
+                              justIcon
+                              target="_blank"
+                              color="transparent"
+                              onClick={renderProps.onClick}
+                              disabled={renderProps.disabled}
+                            >
+                              <i className={"fab fa-google-plus-g"} />
+                            </Button>
+                          )}
+                          onSuccess={responseGoogle}
+                          onFailure={responseGoogle}
+                          cookiePolicy={'single_host_origin'}
+                        />
+
                       </div>
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
-                    <CardBody>
+                    <p className={classes.divider} style={{ marginBottom: "1rem" }}>We only provide login using google</p>
+                    {/* <CardBody>
                       <CustomInput
                         labelText="Email..."
                         value={this.state.email.value}
@@ -212,7 +240,7 @@ class LoginPage extends React.Component {
                       <Button type="submit" simple color="primary" size="lg">
                         Login
                       </Button>
-                    </CardFooter>
+                    </CardFooter> */}
                   </form>
                 </Card>
               </GridItem>

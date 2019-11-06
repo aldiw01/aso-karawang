@@ -28,8 +28,30 @@ import logo2 from "assets/img/telkomrev.png";
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
+  constructor() {
+    super();
+    console.log(localStorage.getItem("auth"))
+    const profile = localStorage.getItem("auth") !== null && localStorage.getItem("auth") !== 'undefined' ? JSON.parse(localStorage.getItem("auth")) : "";
+    if (profile !== "") {
+      this.state = {
+        user: {
+          name: profile.name,
+          email: profile.email,
+          givenName: profile.givenName,
+          familyName: profile.familyName,
+          imageUrl: profile.imageUrl
+        }
+      }
+    } else {
+      this.state = {
+        user: ''
+      }
+    }
+  }
+
   render() {
     const { classes, ...rest } = this.props;
+    console.log(this.state.user)
     return (
       <div>
         <Header
@@ -37,7 +59,8 @@ class LandingPage extends React.Component {
           routes={dashboardRoutes}
           brand={logo}
           brand2={logo2}
-          rightLinks={<HeaderLinks />}
+          rightLinks={<HeaderLinks user={this.state.user} />}
+          // rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
             height: 400,
