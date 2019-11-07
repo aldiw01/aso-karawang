@@ -19,6 +19,11 @@ const blogPageStyle = {
     color: "#999",
     textAlign: "center !important"
   },
+  subdescription: {
+    margin: "2rem auto",
+    maxWidth: "600px",
+    textAlign: "center"
+  },
   name: {
     marginTop: "-80px"
   },

@@ -4,9 +4,9 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Filter1 from "@material-ui/icons/Filter1";
+import Filter2 from "@material-ui/icons/Filter2";
+import Filter3 from "@material-ui/icons/Filter3";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -14,16 +14,23 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import NavPills from "components/NavPills/NavPills.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
+import pt1 from "assets/img/pt/pt1.gif";
+import pt2 from "assets/img/pt/pt2.gif";
+import pt3 from "assets/img/pt/pt3.gif";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
 class PTPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
+    const imageClasses = classNames(
+      classes.imgRaised,
+      classes.imgFluid
+    );
     return (
       <div>
         <Header
@@ -42,7 +49,7 @@ class PTPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>FTTH (Fiber To The Home)</h1>
+                <h1 className={classes.title}>FTTH</h1>
               </GridItem>
             </GridContainer>
           </div>
@@ -55,41 +62,53 @@ class PTPage extends React.Component {
                   <GridItem xs={12} sm={12} md={8}>
                     <h2 className={classes.subtitle}>Provisioning Type</h2>
                     <h5 className={classes.description}>
-                      This is the paragraph where you can write more details about your
-                      product. Keep you user engaged by providing meaningful
-                      information. Remember that by this time, the user is curious,
-                      otherwise he wouldn't scroll to get here. Add a button if you want
-                      the user to see more.
+                      Bagian ini menjelaskan tipe provisioning berdasarkan jalur penarikan instalasi kabel rumah, yuk pelajari apa sih bedanya!
                     </h5>
                   </GridItem>
                 </GridContainer>
                 <div>
-                  <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Free Chat"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Chat}
-                        iconColor="info"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Verified Users"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={VerifiedUser}
-                        iconColor="success"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Fingerprint"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Fingerprint}
-                        iconColor="danger"
-                        vertical
+                  <GridContainer justify="center">
+                    <GridItem xs={12}>
+                      <NavPills
+                        color="danger"
+                        tabs={[
+                          {
+                            tabButton: "PT1",
+                            tabIcon: Filter1,
+                            tabContent: (
+                              <React.Fragment>
+                                <img src={pt1} alt="Provisioning Type 1" className={imageClasses} />
+                                <div className={classes.description}>
+                                  Provisioning Type 1 adalah : pemasangan drop cable dari ODP yang tersedia sampai ke pelanggan.
+                                </div>
+                              </React.Fragment>
+                            )
+                          },
+                          {
+                            tabButton: "PT2",
+                            tabIcon: Filter2,
+                            tabContent: (
+                              <React.Fragment>
+                                <img src={pt2} alt="Provisioning Type 2" className={imageClasses} />
+                                <div className={classes.description}>
+                                  Provisioning Type 2 adalah : Provisioning berupa pemasangan ODP baru sampai dengan pemasangan drop cable ke pelanggan (PT1). ODP dipasang pada saat ada permintaan pelanggan di rute kabel distribusi FTTH.
+                                </div>
+                              </React.Fragment>
+                            )
+                          },
+                          {
+                            tabButton: "PT3",
+                            tabIcon: Filter3,
+                            tabContent: (
+                              <React.Fragment>
+                                <img src={pt3} alt="Provisioning Type 3" className={imageClasses} />
+                                <div className={classes.description}>
+                                  Provisioning Type 3 adalah : Provisioning dilakukan dari pemasangan kabel distribusi baru, pemasangan ODP sampai dengan pemasangan drop cable ke pelanggan (Belum ada rute atau rute habis secara kapasitas).
+                                </div>
+                              </React.Fragment>
+                            )
+                          }
+                        ]}
                       />
                     </GridItem>
                   </GridContainer>

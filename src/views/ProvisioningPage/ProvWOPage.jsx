@@ -4,9 +4,9 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Dashboard from "@material-ui/icons/Dashboard";
+import Schedule from "@material-ui/icons/Schedule";
+import List from "@material-ui/icons/List";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -14,16 +14,24 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import NavPills from "components/NavPills/NavPills.jsx";
+
+import StatusOrder from "./Section/StatusOrder.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
+import statusOrder from "assets/img/provisioning/status order.jpg";
+import fulfillmentNoss from "assets/img/provisioning/fulfillment noss.jpg";
+import wfmFlow from "assets/img/provisioning/wfm flow.jpg";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
 class ProvWOPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
+    const imageClasses = classNames(
+      classes.imgFluid
+    );
     return (
       <div>
         <Header
@@ -55,41 +63,41 @@ class ProvWOPage extends React.Component {
                   <GridItem xs={12} sm={12} md={8}>
                     <h2 className={classes.subtitle}>Work Order</h2>
                     <h5 className={classes.description}>
-                      This is the paragraph where you can write more details about your
-                      product. Keep you user engaged by providing meaningful
-                      information. Remember that by this time, the user is curious,
-                      otherwise he wouldn't scroll to get here. Add a button if you want
-                      the user to see more.
+                      Bagian ini menjelaskan semua proses pada provisioning mulai dari pendaftaran hingga selesai, yuk pelajari alurnya!
                     </h5>
                   </GridItem>
                 </GridContainer>
                 <div>
-                  <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Free Chat"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Chat}
-                        iconColor="info"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Verified Users"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={VerifiedUser}
-                        iconColor="success"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Fingerprint"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Fingerprint}
-                        iconColor="danger"
-                        vertical
+                  <GridContainer justify="center">
+                    <GridItem xs={12}>
+                      <NavPills
+                        color="danger"
+                        tabs={[
+                          {
+                            tabButton: "Status",
+                            tabIcon: Dashboard,
+                            tabContent: (
+                              <React.Fragment>
+                                <img src={statusOrder} alt="Status Order" className={imageClasses} />
+                                <StatusOrder />
+                              </React.Fragment>
+                            )
+                          },
+                          {
+                            tabButton: "Proses",
+                            tabIcon: Schedule,
+                            tabContent: (
+                              <img src={fulfillmentNoss} alt="Fulfillment Noss" className={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "Alur WFM",
+                            tabIcon: List,
+                            tabContent: (
+                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                            )
+                          }
+                        ]}
                       />
                     </GridItem>
                   </GridContainer>

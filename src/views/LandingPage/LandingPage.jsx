@@ -1,4 +1,6 @@
 import React from "react";
+// react components for routing our app without refresh
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -30,7 +32,6 @@ const dashboardRoutes = [];
 class LandingPage extends React.Component {
   constructor() {
     super();
-    console.log(localStorage.getItem("auth"))
     const profile = localStorage.getItem("auth") !== null && localStorage.getItem("auth") !== 'undefined' ? JSON.parse(localStorage.getItem("auth")) : "";
     if (profile !== "") {
       this.state = {
@@ -51,7 +52,6 @@ class LandingPage extends React.Component {
 
   render() {
     const { classes, ...rest } = this.props;
-    console.log(this.state.user)
     return (
       <div>
         <Header
@@ -72,21 +72,37 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Pedoman ASO<br />Witel Karawang</h1>
+                <h1 className={classes.title}>Pedoman WOC<br />Witel Karawang</h1>
                 <h4>
                   One stop point untuk pedoman ASO di Witel Karawang dalam rangka transformasi digital di Telkom Group.
                 </h4>
                 <br />
-                <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fas fa-play" />
-                  Watch video
-                </Button>
+                {this.state.user !== "" ?
+                  <Link to="/ftth">
+                    <Button
+                      color="danger"
+                      size="lg"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-play" />
+                      Get Started
+                    </Button>
+                  </Link> :
+                  <Link to="/login">
+                    <Button
+                      color="danger"
+                      size="lg"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-sign-in-alt" />
+                      Login
+                    </Button>
+                  </Link>
+                }
               </GridItem>
             </GridContainer>
           </div>

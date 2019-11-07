@@ -48,7 +48,6 @@ class LoginPage extends React.Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
-    // this.googleAuth = new googleAuth();
   }
 
   componentDidMount() {
@@ -172,7 +171,7 @@ class LoginPage extends React.Component {
                         </Button> */}
 
                         <GoogleLogin
-                          clientId="49527778224-0ohjb04oiflj3q52av9c5m72n4rvd0ep.apps.googleusercontent.com"
+                          clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                           buttonText="Login"
                           render={renderProps => (
                             <Button
