@@ -12,10 +12,6 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import ProfileArea from "components/ProfileArea/ProfileArea.jsx";
 
-import profile from "assets/img/faces/aldi.jpg";
-import user from "assets/img/faces/user.svg";
-import users from "assets/img/faces/users.svg";
-
 import GM from "assets/img/faces/GM - Sonny.png";
 import WR from "assets/img/faces/WR - Heri.png";
 import ASO from "assets/img/faces/ASO - Yahya.png";

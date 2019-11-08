@@ -103,7 +103,7 @@ class FTTHPage extends React.Component {
                                   Optical Line Terminal ( OLT ) adalah suatu perangkat aktif ( Opto-Elektik )
                                   yang berfungsi :
                                   <ol style={{ textAlign: "justify" }}>
-                                    <li>Mengubah sinyal Elektrik <i class="fas fa-arrow-right"></i> Sinyal Optik</li>
+                                    <li>Mengubah sinyal Elektrik <i className="fas fa-arrow-right"></i> Sinyal Optik</li>
                                     <li>Sebagai multiplexer</li>
                                   </ol>
                                 </div>

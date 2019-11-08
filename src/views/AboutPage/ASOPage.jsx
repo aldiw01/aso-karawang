@@ -12,7 +12,6 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import ProfileArea from "components/ProfileArea/ProfileArea.jsx";
 
-import profile from "assets/img/faces/aldi.jpg";
 import user from "assets/img/faces/user.svg";
 import users from "assets/img/faces/users.svg";
 

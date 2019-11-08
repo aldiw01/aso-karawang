@@ -59,7 +59,7 @@ class LandingPage extends React.Component {
           routes={dashboardRoutes}
           brand={logo}
           brand2={logo2}
-          rightLinks={<HeaderLinks user={this.state.user} />}
+          rightLinks={<HeaderLinks />}
           // rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{

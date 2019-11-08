@@ -14,17 +14,16 @@ export default function SimpleExpansionPanel() {
       fontSize: "15px",
     },
   };
-  console.log(classes)
 
   return (
-    <div className={classes.root}>
+    <div style={classes.root}>
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>1. InSite Plant (ISP)</Typography>
+          <Typography style={classes.heading}>1. InSite Plant (ISP)</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -38,7 +37,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>2. OutSite Plant (OSP)</Typography>
+          <Typography style={classes.heading}>2. OutSite Plant (OSP)</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -52,7 +51,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>3. Feeder Optical Cables</Typography>
+          <Typography style={classes.heading}>3. Feeder Optical Cables</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -66,7 +65,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>4. Distribution Optical Cables</Typography>
+          <Typography style={classes.heading}>4. Distribution Optical Cables</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -80,7 +79,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>5. Drop Core Cables</Typography>
+          <Typography style={classes.heading}>5. Drop Core Cables</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -94,7 +93,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>6. ONT (Optical Network Terminal)</Typography>
+          <Typography style={classes.heading}>6. ONT (Optical Network Terminal)</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -108,7 +107,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>7. STB (Set-Top Box)</Typography>
+          <Typography style={classes.heading}>7. STB (Set-Top Box)</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>

@@ -29,18 +29,20 @@ const Logout = props => (
 )
 
 function HeaderLinks({ ...props }) {
-  const { classes, user } = props;
-  // const profile = JSON.parse(localStorage.getItem("auth")) || "";
-  // var user = "";
-  // if (profile !== "") {
-  //   user = {
-  //     name: profile.name,
-  //     email: profile.email,
-  //     givenName: profile.givenName,
-  //     familyName: profile.familyName,
-  //     imageUrl: profile.imageUrl
-  //   }
-  // }
+  const { classes } = props;
+  var user;
+  const profile = localStorage.getItem("auth") !== null && localStorage.getItem("auth") !== 'undefined' ? JSON.parse(localStorage.getItem("auth")) : "";
+  if (profile !== "") {
+    user = {
+      name: profile.name,
+      email: profile.email,
+      givenName: profile.givenName,
+      familyName: profile.familyName,
+      imageUrl: profile.imageUrl
+    }
+  } else {
+    user = '';
+  }
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -53,7 +55,7 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Home}
           dropdownList={[
-            <Link to="/ftth" className={classes.dropdownLink}>
+            <Link to="/ftth" className={classes.dropdownLink} user={user} >
               Overview
             </Link>,
             <Link to="/ftth/pt" className={classes.dropdownLink}>
