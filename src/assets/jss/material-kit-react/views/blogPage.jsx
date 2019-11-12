@@ -74,6 +74,16 @@ const blogPageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
+  },
+  options: {
+    width: "100%",
+    fontSize: "initial"
+  },
+  indicators: {
+    ...title,
+    marginTop: "30px",
+    minHeight: "32px",
+    textDecoration: "none"
   }
 };
 

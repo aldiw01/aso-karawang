@@ -28,6 +28,20 @@ const Logout = props => (
   </ListItem>
 )
 
+const Quiz = props => (
+  <ListItem className={props.classes.listItem}>
+    <Link to="/quiz">
+      <Button
+        href=""
+        color="transparent"
+        target="_blank"
+        className={props.classes.navLink}>
+        Quiz
+      </Button>
+    </Link>
+  </ListItem>
+)
+
 function HeaderLinks({ ...props }) {
   const { classes } = props;
   var user;
@@ -140,30 +154,6 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
 
-      {/* <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/component" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
-          ]}
-        />
-      </ListItem> */}
-
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
@@ -187,19 +177,31 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
 
-      <ListItem className={classes.listItem}>
-        <Link to={user ? "" : "/login"}>
-          <Button
-            href=""
-            color="transparent"
-            target="_blank"
-            // style={{ color: 'white' }}
-            className={classes.navLink}>{user ? `${user.name}` : `Login`}</Button>
-        </Link>
-      </ListItem>
       {
-        user ? <Logout {...props} /> : ''
+        user ?
+          <React.Fragment>
+            <Quiz {...props} />
+            <ListItem className={classes.listItem}>
+              <Button
+                href=""
+                color="transparent"
+                target="_blank"
+                className={classes.navLink}>{user.name}</Button>
+            </ListItem>
+            <Logout {...props} />
+          </React.Fragment>
+          :
+          <ListItem className={classes.listItem}>
+            <Link to={"/login"}>
+              <Button
+                href=""
+                color="transparent"
+                target="_blank"
+                className={classes.navLink}>Login</Button>
+            </Link>
+          </ListItem>
       }
+
     </List>
   );
 }

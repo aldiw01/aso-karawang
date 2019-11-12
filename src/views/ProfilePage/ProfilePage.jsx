@@ -93,7 +93,7 @@ class ProfilePage extends React.Component {
               </GridContainer>
               <div className={classes.description} style={{ paddingBottom: "3rem" }}>
                 <p>
-                  A passionate developer and AI researcher, Aldi Wiranata — Grow up in Jakarta neighbourhood until go to high school in Bandung. Rarely go hang out as he prefered to stay at home doing his hobby waching movies and codes.{" "}
+                  A passionate web developer and AI researcher, Aldi Wiranata — Grow up in Jakarta neighbourhood until go to high school in Bandung. Rarely go hang out as he prefered to stay at home doing his hobby waching movies and codes.{" "}
                 </p>
               </div>
             </div>
