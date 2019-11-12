@@ -5,7 +5,7 @@ This project is under development, feel free to contact me for question.
 
 ### clone the repo
 ``` bash
-$ git clone 
+$ git clone https://github.com/aldiw01/aso-karawang.git
 ```
 
 ### go into app's directory

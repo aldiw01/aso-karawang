@@ -11,6 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
 import { Apps, Info, Home, Launch, Build, CastConnected } from "@material-ui/icons";
+import Flask from "assets/img/Flask.js"
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
@@ -37,6 +38,21 @@ const Quiz = props => (
         target="_blank"
         className={props.classes.navLink}>
         Quiz
+      </Button>
+    </Link>
+  </ListItem>
+)
+
+const Laboratory = props => (
+  <ListItem className={props.classes.listItem}>
+    <Link to="/laboratory">
+      <Button
+        href=""
+        color="transparent"
+        target="_blank"
+        className={props.classes.navLink}>
+        <Flask />
+        Laboratorium
       </Button>
     </Link>
   </ListItem>
@@ -176,6 +192,8 @@ function HeaderLinks({ ...props }) {
           ]}
         />
       </ListItem>
+
+      <Laboratory {...props} />
 
       {
         user ?

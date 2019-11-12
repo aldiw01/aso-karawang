@@ -3,9 +3,9 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import ImportantDevices from "@material-ui/icons/ImportantDevices";
+import Palette from "@material-ui/icons/Palette";
+import Assessment from "@material-ui/icons/Assessment";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -22,11 +22,7 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Mission Statement</h2>
             <h5 className={classes.description}>
-              This is the paragraph where you can write more details about your
-              product. Keep you user engaged by providing meaningful
-              information. Remember that by this time, the user is curious,
-              otherwise he wouldn't scroll to get here. Add a button if you want
-              the user to see more.
+              Situs Pedoman WOC Witel Karawang sebagai One stop point untuk pedoman ASO di Witel Karawang dalam rangka transformasi digital di Telkom Group. Untuk mencapai tujuan tersebut kami mengusung 3 buah poin yaitu:
             </h5>
           </GridItem>
         </GridContainer>
@@ -34,27 +30,27 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Free Chat"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Chat}
+                title="Anywhere Anytime"
+                description="Dapat diakses dimana saja dan kapan saja selama terhubung ke internet, serta kompatibel dengan device apapun."
+                icon={ImportantDevices}
                 iconColor="info"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Verified Users"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={VerifiedUser}
+                title="Great Design"
+                description="Dibangun dengan desain yang menarik untuk mendapatkan experience yang memuaskan."
+                icon={Palette}
                 iconColor="success"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Fingerprint"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Fingerprint}
+                title="Gamification"
+                description="Dilengkapi dengan gamifikasi sehingga lebih menarik dan sebagai evaluasi proses pembelajaran."
+                icon={Assessment}
                 iconColor="danger"
                 vertical
               />

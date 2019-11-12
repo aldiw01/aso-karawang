@@ -120,7 +120,7 @@ class QuizPage extends React.Component {
     const data = {
       username: this.user.name,
       email: this.user.email,
-      course_id: "1",
+      imageUrl: this.user.imageUrl,
       score: this.state.score.filter(val => val === "1").length,
       duration: this.state.duration
     }

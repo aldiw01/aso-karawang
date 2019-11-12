@@ -32,6 +32,7 @@ import HDTDMPage from "views/WOCPage/HDTDMPage.jsx";
 import WitelPage from "views/AboutPage/WitelPage.jsx";
 import ASOPage from "views/AboutPage/ASOPage.jsx";
 import QuizPage from "views/QuizPage/QuizPage.jsx";
+import LaboratoryPage from "views/LaboratoryPage/LaboratoryPage.jsx";
 
 var hist = createBrowserHistory();
 
@@ -76,6 +77,8 @@ ReactDOM.render(
         <Route path="/about/developer" component={ProfilePage} />
 
         <Route path="/quiz" component={QuizPage} />
+
+        <Route path="/laboratory" component={LaboratoryPage} />
 
         <Route path="/" component={LandingPage} />
       </Switch>

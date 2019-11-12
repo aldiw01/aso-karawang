@@ -21,7 +21,7 @@ import logo2 from "assets/img/telkomrev.png";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
-class WOCPage extends React.Component {
+class LaboratoryPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -42,7 +42,7 @@ class WOCPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>WOC</h1>
+                <h1 className={classes.title}>Laboratorium WOC</h1>
               </GridItem>
             </GridContainer>
           </div>
@@ -53,47 +53,16 @@ class WOCPage extends React.Component {
               <div className={classes.section}>
                 <GridContainer justify="center">
                   <GridItem xs={12} sm={12} md={8}>
-                    <h2 className={classes.subtitle}>WOC Overview</h2>
+                    {/* <h2 className={classes.subtitle}>Laboratorium WOC</h2> */}
                     <h5 className={classes.description}>
-                      This is the paragraph where you can write more details about your
-                      product. Keep you user engaged by providing meaningful
-                      information. Remember that by this time, the user is curious,
-                      otherwise he wouldn't scroll to get here. Add a button if you want
-                      the user to see more.
+                      Add some description here.
                     </h5>
                   </GridItem>
                 </GridContainer>
                 <div>
                   <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Free Chat"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Chat}
-                        iconColor="info"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Verified Users"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={VerifiedUser}
-                        iconColor="success"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Fingerprint"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Fingerprint}
-                        iconColor="danger"
-                        vertical
-                      />
-                    </GridItem>
                     <GridItem xs={12}>
-                      <iframe style={{ width: "100%", height: "600px" }} src="https://drive.google.com/open?id=16JeS8OPpjvETEhTOruiyGNvbo5dbmTWUOe-G-yBsk0A"></iframe>
+                      <iframe style={{ width: "100%", height: "600px" }} src="https://docs.google.com/spreadsheets/d/1ZcYLJiBHzBGuBqWsUWzPVkXHfjhw2Aq5eqOpAEQzS1E/edit?usp=sharing"></iframe>
                     </GridItem>
                   </GridContainer>
                 </div>
@@ -107,4 +76,4 @@ class WOCPage extends React.Component {
   }
 }
 
-export default withStyles(blogPageStyle)(WOCPage);
+export default withStyles(blogPageStyle)(LaboratoryPage);

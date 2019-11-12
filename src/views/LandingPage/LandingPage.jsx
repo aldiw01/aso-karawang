@@ -72,7 +72,7 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Pedoman WOC<br />Witel Karawang</h1>
+                <h1 className={classes.title}>WOC Karawang</h1>
                 <h4>
                   One stop point untuk pedoman ASO di Witel Karawang dalam rangka transformasi digital di Telkom Group.
                 </h4>
