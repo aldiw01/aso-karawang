@@ -5,9 +5,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Filter1 from "@material-ui/icons/Filter1";
-import Filter2 from "@material-ui/icons/Filter2";
-import Filter3 from "@material-ui/icons/Filter3";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";

@@ -23,7 +23,6 @@ const Logout = props => (
     <Button
       href=""
       color="transparent"
-      target="_blank"
       onClick={() => { localStorage.removeItem("auth"); window.location.href = '/'; }}
       className={props.classes.navLink}>Logout</Button>
   </ListItem>
@@ -35,7 +34,6 @@ const Quiz = props => (
       <Button
         href=""
         color="transparent"
-        target="_blank"
         className={props.classes.navLink}>
         Quiz
       </Button>
@@ -45,16 +43,15 @@ const Quiz = props => (
 
 const Laboratory = props => (
   <ListItem className={props.classes.listItem}>
-    <Link to="/laboratory">
-      <Button
-        href=""
-        color="transparent"
-        target="_blank"
-        className={props.classes.navLink}>
-        <Flask />
-        Laboratorium
+    {/* <Link to="/laboratory"> */}
+    <Button
+      href="/laboratory"
+      color="transparent"
+      className={props.classes.navLink}>
+      <Flask />
+      Laboratorium
       </Button>
-    </Link>
+    {/* </Link> */}
   </ListItem>
 )
 

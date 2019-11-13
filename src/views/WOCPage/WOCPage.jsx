@@ -92,9 +92,6 @@ class WOCPage extends React.Component {
                         vertical
                       />
                     </GridItem>
-                    <GridItem xs={12}>
-                      <iframe style={{ width: "100%", height: "600px" }} src="https://drive.google.com/open?id=16JeS8OPpjvETEhTOruiyGNvbo5dbmTWUOe-G-yBsk0A"></iframe>
-                    </GridItem>
                   </GridContainer>
                 </div>
               </div>

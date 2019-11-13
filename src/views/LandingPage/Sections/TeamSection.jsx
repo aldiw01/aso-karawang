@@ -6,7 +6,6 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
 import Filter1 from "@material-ui/icons/Filter1";
 import Filter2 from "@material-ui/icons/Filter2";
 import Filter3 from "@material-ui/icons/Filter3";
@@ -15,17 +14,10 @@ import Star from "@material-ui/icons/Star";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
 import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
 import InfoArea from "components/InfoArea/InfoArea.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
-
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
 
 class TeamSection extends React.Component {
   constructor(props) {
@@ -51,16 +43,6 @@ class TeamSection extends React.Component {
       });
   }
 
-  // componentDidMount() {
-  //   axios.get(process.env.REACT_APP_SERVER_API + 'score/top10')
-  //     .then(res => {
-  //       this.setState({ data: res.data });
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // }
-
   render() {
     const { classes } = this.props;
     const imageClasses = classNames(
@@ -81,7 +63,17 @@ class TeamSection extends React.Component {
                 </GridItem>
                 <InfoArea
                   title={this.state.data[0].username ? this.state.data[1].username : ""}
-                  description={this.state.data[0].username ? <React.Fragment>Score: {this.state.data[1].score}<br />Duration: {Math.floor(this.state.data[1].duration / 60000) + ":" + Math.floor((this.state.data[1].duration / 1000) % 60) + ":" + Math.floor(this.state.data[1].duration / 100) % 10}</React.Fragment> : ""}
+                  description={
+                    this.state.data[0].username ?
+                      <React.Fragment>
+                        {this.state.data[0].username ? this.state.data[1].email : ""}<br />
+                        Score: {this.state.data[1].score}<br />
+                        Duration: {Math.floor(this.state.data[1].duration / 60000) + ":" + Math.floor((this.state.data[1].duration / 1000) % 60) + ":" + Math.floor(this.state.data[1].duration / 100) % 10}<br />
+                        {this.state.data[0].username ? new Date(this.state.data[1].created).toLocaleString('en-GB') : ""}
+                      </React.Fragment>
+                      :
+                      ""
+                  }
                   icon={Filter2}
                   iconColor="success"
                   vertical
@@ -98,7 +90,17 @@ class TeamSection extends React.Component {
                 </GridItem>
                 <InfoArea
                   title={this.state.data[0].username}
-                  description={this.state.data[0].username ? <React.Fragment>Score: {this.state.data[0].score}<br />Duration: {Math.floor(this.state.data[0].duration / 60000) + ":" + Math.floor((this.state.data[0].duration / 1000) % 60) + ":" + Math.floor(this.state.data[0].duration / 100) % 10}</React.Fragment> : ""}
+                  description={
+                    this.state.data[0].username ?
+                      <React.Fragment>
+                        {this.state.data[0].email}<br />
+                        Score: {this.state.data[0].score}<br />
+                        Duration: {Math.floor(this.state.data[0].duration / 60000) + ":" + Math.floor((this.state.data[0].duration / 1000) % 60) + ":" + Math.floor(this.state.data[0].duration / 100) % 10}<br />
+                        {new Date(this.state.data[0].created).toLocaleString('en-GB')}
+                      </React.Fragment>
+                      :
+                      ""
+                  }
                   icon={Filter1}
                   iconColor="danger"
                   vertical
@@ -112,7 +114,17 @@ class TeamSection extends React.Component {
                 </GridItem>
                 <InfoArea
                   title={this.state.data[0].username ? this.state.data[2].username : ""}
-                  description={this.state.data[0].username ? <React.Fragment>Score: {this.state.data[2].score}<br />Duration: {Math.floor(this.state.data[2].duration / 60000) + ":" + Math.floor((this.state.data[2].duration / 1000) % 60) + ":" + Math.floor(this.state.data[2].duration / 100) % 10}</React.Fragment> : ""}
+                  description={
+                    this.state.data[0].username ?
+                      <React.Fragment>
+                        {this.state.data[0].username ? this.state.data[2].email : ""}<br />
+                        Score: {this.state.data[2].score}<br />
+                        Duration: {Math.floor(this.state.data[2].duration / 60000) + ":" + Math.floor((this.state.data[2].duration / 1000) % 60) + ":" + Math.floor(this.state.data[2].duration / 100) % 10}<br />
+                        {this.state.data[0].username ? new Date(this.state.data[2].created).toLocaleString('en-GB') : ""}
+                      </React.Fragment>
+                      :
+                      ""
+                  }
                   icon={Filter3}
                   iconColor="info"
                   vertical
