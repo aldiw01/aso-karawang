@@ -44,24 +44,20 @@ class LaboratoryPage extends React.Component {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
-            <div className={classes.container}>
-              <div className={classes.section}>
-                <GridContainer justify="center">
-                  <GridItem xs={12} sm={12} md={8}>
-                    {/* <h2 className={classes.subtitle}>Laboratorium WOC</h2> */}
-                    <h5 className={classes.description}>
-                      Add some description here.
-                    </h5>
-                  </GridItem>
-                </GridContainer>
-                <div>
-                  <GridContainer>
-                    <GridItem xs={12}>
-                      <iframe style={{ width: "100%", height: "600px" }} name="Laboratorium" title="Laboratorium WOC" src="https://docs.google.com/spreadsheets/d/1ZcYLJiBHzBGuBqWsUWzPVkXHfjhw2Aq5eqOpAEQzS1E/edit?usp=sharing"></iframe>
-                    </GridItem>
-                  </GridContainer>
-                </div>
-              </div>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={8}>
+                {/* <h2 className={classes.subtitle}>Laboratorium WOC</h2> */}
+                {/* <h5 className={classes.description}>
+                  Add some description here.
+                    </h5> */}
+              </GridItem>
+            </GridContainer>
+            <div>
+              <GridContainer>
+                <GridItem xs={12}>
+                  <iframe style={{ width: "100%", height: "600px" }} name="Laboratorium" title="Laboratorium WOC" src="https://docs.google.com/spreadsheets/d/1ZcYLJiBHzBGuBqWsUWzPVkXHfjhw2Aq5eqOpAEQzS1E/edit?usp=sharing"></iframe>
+                </GridItem>
+              </GridContainer>
             </div>
           </div>
         </div>
