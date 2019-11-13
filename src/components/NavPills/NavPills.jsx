@@ -103,11 +103,11 @@ class NavPills extends React.Component {
         <GridItem {...horizontal.contentGrid}>{tabContent}</GridItem>
       </GridContainer>
     ) : (
-      <div>
-        {tabButtons}
-        {tabContent}
-      </div>
-    );
+        <div>
+          {tabButtons}
+          {tabContent}
+        </div>
+      );
   }
 }
 
@@ -123,7 +123,7 @@ NavPills.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       tabButton: PropTypes.string,
-      tabIcon: PropTypes.func,
+      tabIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
       tabContent: PropTypes.node
     })
   ).isRequired,

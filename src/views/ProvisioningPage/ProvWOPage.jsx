@@ -4,9 +4,9 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
+import AssignmentTurnedIn from "@material-ui/icons/AssignmentTurnedIn";
 import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
+import CompareArrows from "@material-ui/icons/CompareArrows";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -75,7 +75,7 @@ class ProvWOPage extends React.Component {
                         tabs={[
                           {
                             tabButton: "Status",
-                            tabIcon: Dashboard,
+                            tabIcon: AssignmentTurnedIn,
                             tabContent: (
                               <React.Fragment>
                                 <img src={statusOrder} alt="Status Order" className={imageClasses} />
@@ -92,7 +92,7 @@ class ProvWOPage extends React.Component {
                           },
                           {
                             tabButton: "Alur WFM",
-                            tabIcon: List,
+                            tabIcon: CompareArrows,
                             tabContent: (
                               <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
                             )

@@ -34,7 +34,7 @@ function ProfileArea({ ...props }) {
 
 ProfileArea.propTypes = {
   classes: PropTypes.object.isRequired,
-  icon: PropTypes.func.isRequired,
+  icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired
 };

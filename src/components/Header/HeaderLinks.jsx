@@ -212,7 +212,7 @@ function HeaderLinks({ ...props }) {
                 href=""
                 color="transparent"
                 target="_blank"
-                // style={{ color: 'white' }}
+                style={{ color: 'red' }}
                 className={classes.navLink}>Login</Button>
             </Link>
           </ListItem>

@@ -60,7 +60,7 @@ class WorkSection extends React.Component {
                     xs={12}
                     className={classes.textCenter}
                   >
-                    <Button color="primary">Send Message</Button>
+                    <Button color="danger">Send Message</Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>

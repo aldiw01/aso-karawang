@@ -4,9 +4,12 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Home from "@material-ui/icons/Home";
+import Stars from "@material-ui/icons/Stars";
+import Launch from "@material-ui/icons/Launch";
+import NetworkCheck from "@material-ui/icons/NetworkCheck";
+import OpenInBrowser from "@material-ui/icons/OpenInBrowser";
+import Telegram from "@material-ui/icons/Telegram";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -14,16 +17,23 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import NavPills from "components/NavPills/NavPills.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
+import statusOrder from "assets/img/provisioning/status order.jpg";
+import fulfillmentNoss from "assets/img/provisioning/fulfillment noss.jpg";
+import wfmFlow from "assets/img/provisioning/wfm flow.jpg";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 
 class ProvToolsPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
+    const imageClasses = classNames(
+      classes.imgRaised,
+      classes.imgFluid
+    );
     return (
       <div>
         <Header
@@ -64,32 +74,56 @@ class ProvToolsPage extends React.Component {
                   </GridItem>
                 </GridContainer>
                 <div>
-                  <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Free Chat"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Chat}
-                        iconColor="info"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Verified Users"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={VerifiedUser}
-                        iconColor="success"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Fingerprint"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Fingerprint}
-                        iconColor="danger"
-                        vertical
+                  <GridContainer justify="center">
+                    <GridItem xs={12}>
+                      <NavPills
+                        color="danger"
+                        tabs={[
+                          {
+                            tabButton: "My Indihome",
+                            tabIcon: Home,
+                            tabContent: (
+                              <React.Fragment>
+                                <img src={statusOrder} alt="Status Order" className={imageClasses} />
+                              </React.Fragment>
+                            )
+                          },
+                          {
+                            tabButton: "StarClick",
+                            tabIcon: Stars,
+                            tabContent: (
+                              <img src={fulfillmentNoss} alt="Fulfillment Noss" className={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "NOSS-F",
+                            tabIcon: Launch,
+                            tabContent: (
+                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "iBooster",
+                            tabIcon: NetworkCheck,
+                            tabContent: (
+                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "Karawang-Pro",
+                            tabIcon: OpenInBrowser,
+                            tabContent: (
+                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "Smart Jawara",
+                            tabIcon: Telegram,
+                            tabContent: (
+                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                            )
+                          }
+                        ]}
                       />
                     </GridItem>
                   </GridContainer>

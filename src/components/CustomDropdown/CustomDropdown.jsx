@@ -74,6 +74,9 @@ class CustomDropdown extends React.Component {
       case "function":
         icon = <this.props.buttonIcon className={classes.buttonIcon} />;
         break;
+      case "object":
+        icon = <this.props.buttonIcon className={classes.buttonIcon} />;
+        break;
       case "string":
         icon = (
           <Icon className={classes.buttonIcon}>{this.props.buttonIcon}</Icon>
@@ -112,8 +115,8 @@ class CustomDropdown extends React.Component {
                 ? "top-start"
                 : "top"
               : left
-              ? "bottom-start"
-              : "bottom"
+                ? "bottom-start"
+                : "bottom"
           }
           className={classNames({
             [classes.popperClose]: !open,
@@ -189,7 +192,7 @@ CustomDropdown.propTypes = {
     "rose"
   ]),
   buttonText: PropTypes.node,
-  buttonIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  buttonIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.object]),
   dropdownList: PropTypes.array,
   buttonProps: PropTypes.object,
   dropup: PropTypes.bool,
