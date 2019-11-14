@@ -1,7 +1,5 @@
 import React from "react";
 import axios from "axios";
-// nodejs library that concatenates classes
-import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
@@ -23,6 +21,15 @@ import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 class QuizPage extends React.Component {
   constructor() {
     super();
+    this.noAnswer = [];
+    for (var i = 0; i < 4; i++) {
+      this.noAnswer[i] = i;
+    }
+    this.noQuestion = [];
+    for (i = 0; i < 20; i++) {
+      this.noQuestion[i] = i;
+    }
+    this.noQuestion = this.shuffle(this.noQuestion);
     this.user = '';
     const profile = localStorage.getItem("auth") !== null && localStorage.getItem("auth") !== 'undefined' ? JSON.parse(localStorage.getItem("auth")) : "";
     if (profile !== "") {
@@ -39,19 +46,18 @@ class QuizPage extends React.Component {
       activeQuestion: 0,
       answerID: '',
       duration: 0,
+      noAnswer: this.shuffle(this.noAnswer),
+      noQuestion: this.noQuestion,
       quiz: [{
         id: '',
         question: '',
-        ans1: '',
-        ans2: '',
-        ans3: '',
-        ans4: ''
+        ans: ''
       }],
       quizTaken: false,
       selected: [false, false, false, false],
       score: [],
       startQuiz: false,
-      startTime: ''
+      startTime: '',
     }
   }
 
@@ -63,6 +69,21 @@ class QuizPage extends React.Component {
       .catch(error => {
         console.log(error);
       });
+  }
+
+  shuffle = (array) => {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
   }
 
   counting = () => {
@@ -82,10 +103,10 @@ class QuizPage extends React.Component {
   }
 
   handleSubmit = () => {
-    const options = [this.state.quiz[this.state.activeQuestion].ans1, this.state.quiz[this.state.activeQuestion].ans2, this.state.quiz[this.state.activeQuestion].ans3, this.state.quiz[this.state.activeQuestion].ans4];
+    const options = [this.state.quiz[this.state.activeQuestion].ans[0]];
     const ans = options[this.state.selected.findIndex((value) => { return value === true })];
     var array = [false, false, false, false];
-    if (ans === this.state.quiz[this.state.activeQuestion].ans1) {
+    if (ans === this.state.quiz[this.state.activeQuestion].ans[0]) {
       array[this.state.answerID] = "success";
       this.setState({
         score: [...this.state.score, '1'],
@@ -109,6 +130,7 @@ class QuizPage extends React.Component {
   nextQuestion = () => {
     this.setState({
       activeQuestion: this.state.activeQuestion + 1,
+      noAnswer: this.shuffle(this.noAnswer),
       selected: [false, false, false, false]
     })
   }
@@ -144,10 +166,6 @@ class QuizPage extends React.Component {
 
   render() {
     const { classes, ...rest } = this.props;
-    const imageClasses = classNames(
-      classes.imgRaised,
-      classes.imgFluid
-    );
     return (
       <div>
         <Header
@@ -174,7 +192,8 @@ class QuizPage extends React.Component {
         <QuizSection
           activeQuestion={this.state.activeQuestion}
           duration={this.state.duration}
-          quiz={this.state.quiz[this.state.activeQuestion]}
+          noAnswer={this.state.noAnswer}
+          quiz={this.state.quiz[this.state.noQuestion[this.state.activeQuestion]]}
           quizTaken={this.state.quizTaken}
           selected={this.state.selected}
           handleAnswer={this.handleAnswer}

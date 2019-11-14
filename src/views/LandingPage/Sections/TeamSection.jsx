@@ -67,7 +67,7 @@ class TeamSection extends React.Component {
                     this.state.data[0].username ?
                       <React.Fragment>
                         {this.state.data[0].username ? this.state.data[1].email : ""}<br />
-                        Score: {this.state.data[1].score}<br />
+                        Score: {this.state.data[1].score}/20<br />
                         Duration: {Math.floor(this.state.data[1].duration / 60000) + ":" + Math.floor((this.state.data[1].duration / 1000) % 60) + ":" + Math.floor(this.state.data[1].duration / 100) % 10}<br />
                         {this.state.data[0].username ? new Date(this.state.data[1].created).toLocaleString('en-GB') : ""}
                       </React.Fragment>
@@ -94,7 +94,7 @@ class TeamSection extends React.Component {
                     this.state.data[0].username ?
                       <React.Fragment>
                         {this.state.data[0].email}<br />
-                        Score: {this.state.data[0].score}<br />
+                        Score: {this.state.data[0].score}/20<br />
                         Duration: {Math.floor(this.state.data[0].duration / 60000) + ":" + Math.floor((this.state.data[0].duration / 1000) % 60) + ":" + Math.floor(this.state.data[0].duration / 100) % 10}<br />
                         {new Date(this.state.data[0].created).toLocaleString('en-GB')}
                       </React.Fragment>
@@ -118,7 +118,7 @@ class TeamSection extends React.Component {
                     this.state.data[0].username ?
                       <React.Fragment>
                         {this.state.data[0].username ? this.state.data[2].email : ""}<br />
-                        Score: {this.state.data[2].score}<br />
+                        Score: {this.state.data[2].score}/20<br />
                         Duration: {Math.floor(this.state.data[2].duration / 60000) + ":" + Math.floor((this.state.data[2].duration / 1000) % 60) + ":" + Math.floor(this.state.data[2].duration / 100) % 10}<br />
                         {this.state.data[0].username ? new Date(this.state.data[2].created).toLocaleString('en-GB') : ""}
                       </React.Fragment>

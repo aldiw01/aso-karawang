@@ -20,6 +20,7 @@ class QuizSection extends Component {
       activeQuestion,
       classes,
       duration,
+      noAnswer,
       quiz,
       quizTaken,
       selected,
@@ -29,10 +30,6 @@ class QuizSection extends Component {
       score,
       startQuiz
     } = this.props;
-    const imageClasses = classNames(
-      classes.imgRaised,
-      classes.imgFluid
-    );
     return (
       <React.Fragment>
         <div className={classNames(classes.main, classes.mainRaised)}>
@@ -81,56 +78,60 @@ class QuizSection extends Component {
                               <Button
                                 className={classes.options}
                                 color={
-                                  selected[0] === "success" ? "success" :
-                                    selected[0] === "danger" ? "danger" :
-                                      selected[0] ? "info" :
+                                  selected[noAnswer[0]] === "success" ? "success" :
+                                    selected[noAnswer[0]] === "danger" ? "danger" :
+                                      selected[noAnswer[0]] ? "info" :
                                         "github"
                                 }
-                                onClick={() => handleAnswer(0)}
+                                onClick={() => handleAnswer(noAnswer[0])}
+                                style={{ whiteSpace: "normal", textTransform: "none" }}
                               >
-                                {quiz.ans1}
+                                {quiz.ans[noAnswer[0]]}
                               </Button>
                             </GridItem>
                             <GridItem xs={12} sm={6} md={6}>
                               <Button
                                 className={classes.options}
                                 color={
-                                  selected[1] === "success" ? "success" :
-                                    selected[1] === "danger" ? "danger" :
-                                      selected[1] ? "info" :
+                                  selected[noAnswer[1]] === "success" ? "success" :
+                                    selected[noAnswer[1]] === "danger" ? "danger" :
+                                      selected[noAnswer[1]] ? "info" :
                                         "github"
                                 }
-                                onClick={() => handleAnswer(1)}
+                                onClick={() => handleAnswer(noAnswer[1])}
+                                style={{ whiteSpace: "normal", textTransform: "none" }}
                               >
-                                {quiz.ans2}
+                                {quiz.ans[noAnswer[1]]}
                               </Button>
                             </GridItem>
                             <GridItem xs={12} sm={6} md={6}>
                               <Button
                                 className={classes.options}
                                 color={
-                                  selected[2] === "success" ? "success" :
-                                    selected[2] === "danger" ? "danger" :
-                                      selected[2] ? "info" :
+                                  selected[noAnswer[2]] === "success" ? "success" :
+                                    selected[noAnswer[2]] === "danger" ? "danger" :
+                                      selected[noAnswer[2]] ? "info" :
                                         "github"
                                 }
-                                onClick={() => handleAnswer(2)}
+                                onClick={() => handleAnswer(noAnswer[2])}
+                                style={{ whiteSpace: "normal", textTransform: "none" }}
                               >
-                                {quiz.ans3}
+                                {quiz.ans[noAnswer[2]]}
                               </Button>
                             </GridItem>
                             <GridItem xs={12} sm={6} md={6}>
                               <Button
                                 className={classes.options}
                                 color={
-                                  selected[3] === "success" ? "success" :
-                                    selected[3] === "danger" ? "danger" :
-                                      selected[3] ? "info" :
+                                  selected[noAnswer[3]] === "success" ? "success" :
+                                    selected[noAnswer[3]] === "danger" ? "danger" :
+                                      selected[noAnswer[3]] ? "info" :
                                         "github"
                                 }
-                                onClick={() => handleAnswer(3)}
+                                onClick={() => handleAnswer(noAnswer[3])}
+                                style={{ whiteSpace: "normal", textTransform: "none" }}
                               >
-                                {quiz.ans4}
+                                {quiz.ans[noAnswer[3]]}
                               </Button>
                             </GridItem>
                           </GridContainer>

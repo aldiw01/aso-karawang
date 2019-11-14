@@ -72,100 +72,106 @@ function HeaderLinks({ ...props }) {
   }
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="FTTH"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Home}
-          dropdownList={[
-            <Link to="/ftth" className={classes.dropdownLink} user={user} >
-              Overview
-            </Link>,
-            <Link to="/ftth/pt" className={classes.dropdownLink}>
-              Provisioning Type
-            </Link>
-          ]}
-        />
-      </ListItem>
+      {
+        user ?
+          <React.Fragment>
+            <ListItem className={classes.listItem}>
+              <CustomDropdown
+                noLiPadding
+                buttonText="FTTH"
+                buttonProps={{
+                  className: classes.navLink,
+                  color: "transparent"
+                }}
+                buttonIcon={Home}
+                dropdownList={[
+                  <Link to="/ftth" className={classes.dropdownLink} user={user} >
+                    Overview
+                  </Link>,
+                  <Link to="/ftth/pt" className={classes.dropdownLink}>
+                    Provisioning Type
+                  </Link>
+                ]}
+              />
+            </ListItem>
 
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Provisioning"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Launch}
-          dropdownList={[
-            <Link to="/provisioning/wo" className={classes.dropdownLink}>
-              Work Order
-            </Link>,
-            <Link to="/provisioning/tools" className={classes.dropdownLink}>
-              IT Tools
-            </Link>
-          ]}
-        />
-      </ListItem>
+            <ListItem className={classes.listItem}>
+              <CustomDropdown
+                noLiPadding
+                buttonText="Provisioning"
+                buttonProps={{
+                  className: classes.navLink,
+                  color: "transparent"
+                }}
+                buttonIcon={Launch}
+                dropdownList={[
+                  <Link to="/provisioning/wo" className={classes.dropdownLink}>
+                    Work Order
+                  </Link>,
+                  <Link to="/provisioning/tools" className={classes.dropdownLink}>
+                    IT Tools
+                  </Link>
+                ]}
+              />
+            </ListItem>
 
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Assurance"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Build}
-          dropdownList={[
-            <Link to="/assurance/wo" className={classes.dropdownLink}>
-              Work Order
-            </Link>,
-            <Link to="/assurance/tools" className={classes.dropdownLink}>
-              IT Tools
-            </Link>
-          ]}
-        />
-      </ListItem>
+            <ListItem className={classes.listItem}>
+              <CustomDropdown
+                noLiPadding
+                buttonText="Assurance"
+                buttonProps={{
+                  className: classes.navLink,
+                  color: "transparent"
+                }}
+                buttonIcon={Build}
+                dropdownList={[
+                  <Link to="/assurance/wo" className={classes.dropdownLink}>
+                    Work Order
+                  </Link>,
+                  <Link to="/assurance/tools" className={classes.dropdownLink}>
+                    IT Tools
+                  </Link>
+                ]}
+              />
+            </ListItem>
 
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="WOC"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={CastConnected}
-          dropdownList={[
-            <Link to="/woc" className={classes.dropdownLink}>
-              Overview
-            </Link>,
-            <Link to="/woc/provisioning" className={classes.dropdownLink}>
-              HD Provisioning
-            </Link>,
-            <Link to="/woc/assurance" className={classes.dropdownLink}>
-              HD Assurance
-            </Link>,
-            <Link to="/woc/logic" className={classes.dropdownLink}>
-              HD Logic
-            </Link>,
-            <Link to="/woc/fallout" className={classes.dropdownLink}>
-              HD Fallout
-            </Link>,
-            <Link to="/woc/maintenance" className={classes.dropdownLink}>
-              HD Maintenance
-            </Link>,
-            <Link to="/woc/tdm" className={classes.dropdownLink}>
-              HD TDM
-            </Link>
-          ]}
-        />
-      </ListItem>
+            <ListItem className={classes.listItem}>
+              <CustomDropdown
+                noLiPadding
+                buttonText="WOC"
+                buttonProps={{
+                  className: classes.navLink,
+                  color: "transparent"
+                }}
+                buttonIcon={CastConnected}
+                dropdownList={[
+                  <Link to="/woc" className={classes.dropdownLink}>
+                    Overview
+                  </Link>,
+                  <Link to="/woc/provisioning" className={classes.dropdownLink}>
+                    HD Provisioning
+                  </Link>,
+                  <Link to="/woc/assurance" className={classes.dropdownLink}>
+                    HD Assurance
+                  </Link>,
+                  <Link to="/woc/logic" className={classes.dropdownLink}>
+                    HD Logic
+                  </Link>,
+                  <Link to="/woc/fallout" className={classes.dropdownLink}>
+                    HD Fallout
+                  </Link>,
+                  <Link to="/woc/maintenance" className={classes.dropdownLink}>
+                    HD Maintenance
+                  </Link>,
+                  <Link to="/woc/tdm" className={classes.dropdownLink}>
+                    HD TDM
+                  </Link>
+                ]}
+              />
+            </ListItem>
+          </React.Fragment>
+          : ""
+      }
 
       <ListItem className={classes.listItem}>
         <CustomDropdown

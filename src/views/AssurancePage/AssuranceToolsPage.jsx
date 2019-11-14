@@ -64,11 +64,7 @@ class AssuranceToolsPage extends React.Component {
                   <GridItem xs={12} sm={12} md={8}>
                     <h2 className={classes.subtitle}>IT Tools</h2>
                     <h5 className={classes.description}>
-                      This is the paragraph where you can write more details about your
-                      product. Keep you user engaged by providing meaningful
-                      information. Remember that by this time, the user is curious,
-                      otherwise he wouldn't scroll to get here. Add a button if you want
-                      the user to see more.
+                      Bagian ini menjelaskan terkait IT Tools yang digunakan dalam proses assurance. Yuk pelajari kegunaan masing-masing toolsnya!
                     </h5>
                   </GridItem>
                 </GridContainer>
