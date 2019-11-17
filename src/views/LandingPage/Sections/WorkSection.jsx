@@ -14,7 +14,7 @@ import workStyle from "assets/jss/material-kit-react/views/landingPageSections/w
 
 class WorkSection extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, feed, handleChange, handleSubmit } = this.props;
     return (
       <div className={classes.section}>
         <GridContainer justify="center">
@@ -29,6 +29,9 @@ class WorkSection extends React.Component {
                   <CustomInput
                     labelText="Your Name"
                     id="name"
+                    name="name"
+                    value={feed.name || ""}
+                    onChange={handleChange}
                     formControlProps={{
                       fullWidth: true
                     }}
@@ -38,6 +41,9 @@ class WorkSection extends React.Component {
                   <CustomInput
                     labelText="Your Email"
                     id="email"
+                    name="email"
+                    value={feed.email || ""}
+                    onChange={handleChange}
                     formControlProps={{
                       fullWidth: true
                     }}
@@ -46,6 +52,9 @@ class WorkSection extends React.Component {
                 <CustomInput
                   labelText="Your Message"
                   id="message"
+                  name="message"
+                  value={feed.message || ""}
+                  onChange={handleChange}
                   formControlProps={{
                     fullWidth: true,
                     className: classes.textArea
@@ -60,7 +69,7 @@ class WorkSection extends React.Component {
                     xs={12}
                     className={classes.textCenter}
                   >
-                    <Button color="danger">Send Message</Button>
+                    <Button color="danger" onClick={handleSubmit} >Send Message</Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>

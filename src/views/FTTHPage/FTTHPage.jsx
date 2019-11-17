@@ -17,6 +17,7 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
 import Topologi from "./Section/Topologi.jsx";
+import Navigator from "components/Navigator/Navigator.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
@@ -148,6 +149,7 @@ class FTTHPage extends React.Component {
                       />
                     </GridItem>
                   </GridContainer>
+                  <Navigator nextPage="/ftth/pt" />
                 </div>
               </div>
             </div>

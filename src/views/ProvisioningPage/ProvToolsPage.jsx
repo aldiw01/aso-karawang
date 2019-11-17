@@ -18,6 +18,7 @@ import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
+import Navigator from "components/Navigator/Navigator.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
@@ -65,7 +66,7 @@ class ProvToolsPage extends React.Component {
                   <GridItem xs={12} sm={12} md={8}>
                     <h2 className={classes.subtitle}>IT Tools</h2>
                     <h5 className={classes.description}>
-                    Bagian ini menjelaskan terkait IT Tools yang digunakan dalam proses provisioning. Yuk pelajari kegunaan masing-masing toolsnya!
+                      Bagian ini menjelaskan terkait IT Tools yang digunakan dalam proses provisioning. Yuk pelajari kegunaan masing-masing toolsnya!
                     </h5>
                   </GridItem>
                 </GridContainer>
@@ -123,6 +124,7 @@ class ProvToolsPage extends React.Component {
                       />
                     </GridItem>
                   </GridContainer>
+                  <Navigator nextPage="/assurance/wo" prevPage="/provisioning/wo" />
                 </div>
               </div>
             </div>

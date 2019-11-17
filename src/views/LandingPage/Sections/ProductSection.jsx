@@ -40,7 +40,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Great Design"
-                description="Dibangun dengan desain yang menarik untuk mendapatkan experience yang memuaskan."
+                description="Dibangun dengan desain menarik dan waktu loading halaman yang cepat untuk mendapatkan experience memuaskan."
                 icon={Palette}
                 iconColor="success"
                 vertical

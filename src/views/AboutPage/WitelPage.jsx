@@ -11,6 +11,7 @@ import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import ProfileArea from "components/ProfileArea/ProfileArea.jsx";
+import Navigator from "components/Navigator/Navigator.jsx";
 
 import GM from "assets/img/faces/GM - Sonny.png";
 import WR from "assets/img/faces/WR - Heri.png";
@@ -172,6 +173,7 @@ class WitelPage extends React.Component {
                     />
                   </GridItem>
                 </GridContainer>
+                <Navigator nextPage="/about/aso" prevPage="/woc/tdm" />
               </div>
             </div>
           </div>

@@ -8,7 +8,6 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 
 import QuizSection from "./Section/QuizSection.jsx";
@@ -91,6 +90,13 @@ class QuizPage extends React.Component {
     this.setState({
       duration: duration
     })
+    if (duration > 600000) {
+      this.setState({
+        quizTaken: true
+      })
+      clearInterval(this.timer);
+      setTimeout(this.lastQuestion, 1000);
+    }
   }
 
   handleAnswer = (idx) => {
@@ -172,7 +178,7 @@ class QuizPage extends React.Component {
           color="transparent"
           brand={logo}
           brand2={logo2}
-          rightLinks={<HeaderLinks />}
+          // rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
             height: 200,

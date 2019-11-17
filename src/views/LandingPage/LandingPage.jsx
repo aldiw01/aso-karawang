@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
@@ -32,22 +33,52 @@ const dashboardRoutes = [];
 class LandingPage extends React.Component {
   constructor() {
     super();
+    var user;
     const profile = localStorage.getItem("auth") !== null && localStorage.getItem("auth") !== 'undefined' ? JSON.parse(localStorage.getItem("auth")) : "";
     if (profile !== "") {
-      this.state = {
-        user: {
-          name: profile.name,
-          email: profile.email,
-          givenName: profile.givenName,
-          familyName: profile.familyName,
-          imageUrl: profile.imageUrl
-        }
+      user = {
+        name: profile.name,
+        email: profile.email,
+        givenName: profile.givenName,
+        familyName: profile.familyName,
+        imageUrl: profile.imageUrl
       }
     } else {
-      this.state = {
-        user: ''
-      }
+      user = '';
     }
+    this.state = {
+      feed: {
+        name: user.name || '',
+        email: user.email || '',
+        message: ''
+      },
+      user: user
+    }
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      feed: {
+        ...this.state.feed,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
+
+  handleSubmit = () => {
+    axios.post(process.env.REACT_APP_SERVER_API + 'feed', this.state.feed)
+      .then(res => {
+        this.setState({
+          feed: {
+            ...this.state.feed,
+            message: ''
+          }
+        })
+        alert(res.data.message);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -111,7 +142,12 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <ProductSection />
             <TeamSection />
-            <WorkSection />
+            <WorkSection
+              feed={this.state.feed}
+              handleChange={this.handleChange}
+              handleSubmit={this.handleSubmit}
+              user={this.state.user}
+            />
           </div>
         </div>
         <Footer />

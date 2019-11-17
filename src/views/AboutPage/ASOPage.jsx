@@ -11,6 +11,7 @@ import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import ProfileArea from "components/ProfileArea/ProfileArea.jsx";
+import Navigator from "components/Navigator/Navigator.jsx";
 
 import user from "assets/img/faces/user.svg";
 import users from "assets/img/faces/users.svg";
@@ -77,7 +78,6 @@ class ASOPage extends React.Component {
                 </p>
               </div>
               <div className={classes.section}>
-                {/* <div> */}
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={3}>
                     <ProfileArea
@@ -166,7 +166,7 @@ class ASOPage extends React.Component {
                     /> */}
                   </GridItem>
                 </GridContainer>
-                {/* </div> */}
+                <Navigator nextPage="/about/developer" prevPage="/about/witel" />
               </div>
             </div>
           </div>

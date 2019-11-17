@@ -17,6 +17,7 @@ import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
+import Navigator from "components/Navigator/Navigator.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
@@ -115,6 +116,7 @@ class AssuranceWOPage extends React.Component {
                       />
                     </GridItem>
                   </GridContainer>
+                  <Navigator nextPage="/assurance/tools" prevPage="/provisioning/tools" />
                 </div>
               </div>
             </div>
