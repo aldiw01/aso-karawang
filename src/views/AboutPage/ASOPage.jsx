@@ -51,7 +51,7 @@ class ASOPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>About</h1>
+                <h1 className={classes.title}>ASO Profile</h1>
               </GridItem>
             </GridContainer>
           </div>
@@ -72,11 +72,11 @@ class ASOPage extends React.Component {
                   </div>
                 </GridItem>
               </GridContainer>
-              <div className={classes.description}>
+              {/* <div className={classes.description}>
                 <p>
                   Put a description here.{" "}
                 </p>
-              </div>
+              </div> */}
               <div className={classes.section}>
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={3}>

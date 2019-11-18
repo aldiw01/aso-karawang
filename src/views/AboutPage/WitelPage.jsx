@@ -58,7 +58,7 @@ class WitelPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={10}>
-                <h1 className={classes.title}>About</h1>
+                <h1 className={classes.title}>Witel Karawang</h1>
               </GridItem>
             </GridContainer>
           </div>
@@ -79,11 +79,11 @@ class WitelPage extends React.Component {
                   </div>
                 </GridItem>
               </GridContainer>
-              <div className={classes.description}>
+              {/* <div className={classes.description}>
                 <p>
                   Put a description here.{" "}
                 </p>
-              </div>
+              </div> */}
               <div className={classes.section}>
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={3}>

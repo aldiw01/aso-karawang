@@ -11,7 +11,7 @@ function Navigator({ ...props }) {
   const { nextPage, prevPage } = props;
   return (
     <GridContainer justify="space-between" style={{ marginTop: "2rem" }}>
-      <GridItem xs={4}>
+      <GridItem xs={6} sm={4}>
         {prevPage ?
           <Link to={prevPage}>
             <Button
@@ -19,21 +19,21 @@ function Navigator({ ...props }) {
               style={{ width: "100%" }}
             >
               <i className="fa fa-arrow-left" />&emsp;
-              Previous Page
+              Previous
           </Button>
           </Link>
           :
           ""
         }
       </GridItem>
-      <GridItem xs={4}>
+      <GridItem xs={6} sm={4}>
         {nextPage ?
           <Link to={nextPage}>
             <Button
               color="github"
               style={{ width: "100%" }}
             >
-              Next Page&emsp;
+              Next&emsp;
             <i className="fa fa-arrow-right" />
             </Button>
           </Link>
