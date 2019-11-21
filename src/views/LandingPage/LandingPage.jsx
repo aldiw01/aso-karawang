@@ -50,9 +50,11 @@ class LandingPage extends React.Component {
       feed: {
         name: user.name || '',
         email: user.email || '',
+        rating: '',
         message: ''
       },
-      user: user
+      user: user,
+      selectedRating: ''
     }
   }
 
@@ -71,6 +73,7 @@ class LandingPage extends React.Component {
         this.setState({
           feed: {
             ...this.state.feed,
+            rating: '',
             message: ''
           }
         })
@@ -146,6 +149,7 @@ class LandingPage extends React.Component {
               feed={this.state.feed}
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
+              selectedRating={this.state.feed.rating}
               user={this.state.user}
             />
           </div>
