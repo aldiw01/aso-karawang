@@ -7,6 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Home from "@material-ui/icons/Home";
 import Stars from "@material-ui/icons/Stars";
 import Launch from "@material-ui/icons/Launch";
+import Build from "@material-ui/icons/Build";
 import NetworkCheck from "@material-ui/icons/NetworkCheck";
 import OpenInBrowser from "@material-ui/icons/OpenInBrowser";
 import Telegram from "@material-ui/icons/Telegram";
@@ -19,11 +20,14 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
 import Navigator from "components/Navigator/Navigator.jsx";
+// Section
+import MyIndihome from "./Section/MyIndihome.jsx";
+import SCNCX from "./Section/SCNCX.jsx";
+import NOSSF from "./Section/NOSSF.jsx";
+import NOSSA from "./Section/NOSSA.jsx";
 
 import logo from "assets/img/telkom.png";
 import logo2 from "assets/img/telkomrev.png";
-import statusOrder from "assets/img/provisioning/status order.jpg";
-import fulfillmentNoss from "assets/img/provisioning/fulfillment noss.jpg";
 import wfmFlow from "assets/img/provisioning/wfm flow.jpg";
 
 import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
@@ -80,23 +84,28 @@ class ProvToolsPage extends React.Component {
                             tabButton: "My Indihome",
                             tabIcon: Home,
                             tabContent: (
-                              <React.Fragment>
-                                <img src={statusOrder} alt="Status Order" className={imageClasses} />
-                              </React.Fragment>
+                              <MyIndihome imageClasses={imageClasses} />
                             )
                           },
                           {
-                            tabButton: "StarClick",
+                            tabButton: "StarClick NCX",
                             tabIcon: Stars,
                             tabContent: (
-                              <img src={fulfillmentNoss} alt="Fulfillment Noss" className={imageClasses} />
+                              <SCNCX imageClasses={imageClasses} />
                             )
                           },
                           {
                             tabButton: "NOSS-F",
                             tabIcon: Launch,
                             tabContent: (
-                              <img src={wfmFlow} alt="WFM Flow" className={imageClasses} />
+                              <NOSSF imageClasses={imageClasses} />
+                            )
+                          },
+                          {
+                            tabButton: "NOSS-A",
+                            tabIcon: Build,
+                            tabContent: (
+                              <NOSSA imageClasses={imageClasses} />
                             )
                           },
                           {

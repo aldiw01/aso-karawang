@@ -39,6 +39,8 @@ class QuizPage extends React.Component {
         familyName: profile.familyName,
         imageUrl: profile.imageUrl
       }
+    } else {
+      window.location = "/";
     }
     this.timer = '';
     this.state = {
