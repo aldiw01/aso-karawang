@@ -54,7 +54,7 @@ class HDProvisionPage extends React.Component {
               <div className={classes.section}>
                 <GridContainer justify="center">
                   <GridItem xs={12} sm={12} md={8}>
-                    <h2 className={classes.subtitle}>Helpdesk Provision</h2>
+                    <h2 className={classes.subtitle}>Helpdesk Provisioning</h2>
                     <h5 className={classes.description}>
                       This is the paragraph where you can write more details about your
                       product. Keep you user engaged by providing meaningful

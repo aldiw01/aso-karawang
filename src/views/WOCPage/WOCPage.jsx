@@ -25,6 +25,9 @@ import blogPageStyle from "assets/jss/material-kit-react/views/blogPage.jsx";
 class WOCPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
+    const imageClasses = classNames(
+      classes.imgRaised
+    );
     return (
       <div>
         <Header
@@ -56,42 +59,14 @@ class WOCPage extends React.Component {
                   <GridItem xs={12} sm={12} md={8}>
                     <h2 className={classes.subtitle}>WOC Overview</h2>
                     <h5 className={classes.description}>
-                      This is the paragraph where you can write more details about your
-                      product. Keep you user engaged by providing meaningful
-                      information. Remember that by this time, the user is curious,
-                      otherwise he wouldn't scroll to get here. Add a button if you want
-                      the user to see more.
+                      Tour Smart Office WOC Karawang. Yuk lihat ada apa aja di WOC Karawang!
                     </h5>
                   </GridItem>
                 </GridContainer>
                 <div>
                   <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Free Chat"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Chat}
-                        iconColor="info"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Verified Users"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={VerifiedUser}
-                        iconColor="success"
-                        vertical
-                      />
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={4}>
-                      <InfoArea
-                        title="Fingerprint"
-                        description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                        icon={Fingerprint}
-                        iconColor="danger"
-                        vertical
-                      />
+                    <GridItem xs={12}>
+                      <iframe width="956" height="538" name="WOC" title="WOC Overview" className={imageClasses} src="https://www.youtube.com/embed/-b1VkOCnMPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </GridItem>
                   </GridContainer>
                   <Navigator nextPage="/woc/provisioning" prevPage="/assurance/tools" />

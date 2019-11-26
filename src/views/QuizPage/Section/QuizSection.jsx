@@ -52,12 +52,17 @@ class QuizSection extends Component {
                 startQuiz ?
                   <React.Fragment>
                     <GridContainer justify="center">
-                      <GridItem xs={8}>
+                      <GridItem xs={6}>
                         <h3 className={classes.indicators}>
                           {Math.floor(duration / 60000) + ":" + Math.floor((duration / 1000) % 60) + ":" + Math.floor(duration / 100) % 10 + " / 10:00:0"}
                         </h3>
                       </GridItem>
-                      <GridItem xs={4}>
+                      <GridItem xs={3}>
+                        <h3 className={classes.indicators} style={{ float: "right" }}>
+                          Score: {score + "/20"}
+                        </h3>
+                      </GridItem>
+                      <GridItem xs={3}>
                         <h3 className={classes.indicators} style={{ float: "right" }}>
                           {activeQuestion + 1 + "/20"}
                         </h3>

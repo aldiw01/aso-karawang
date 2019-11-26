@@ -1,5 +1,7 @@
 /*eslint-disable*/
 import React from "react";
+// react components for routing our app without refresh
+import { Link } from "react-router-dom";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -38,13 +40,10 @@ function Footer({ ...props }) {
         </div>
         <div className={classes.right}>
           &copy; {new Date().getFullYear()} , developed by{" "}
-          <a
-            href=""
-            className={aClasses}
-            target="_blank"
-          >
+          <Link to="/about/developer" className={aClasses}>
             Aldi Wiranata
-          </a>{" "}
+          </Link>
+          {" "}
           as part of Telkom digital transformation.
         </div>
       </div>
